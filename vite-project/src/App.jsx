@@ -1,10 +1,15 @@
 
 
+import Chai from "./chai"
+
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
+    <>
     <h1>Hello World with Vite | Pratyush Patwal</h1>
+    <p>HELLO! Everyone</p>
+    </>
   )
 }
 
