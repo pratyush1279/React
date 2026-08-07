@@ -1,0 +1,36 @@
+import { useCallback, useState } from 'react'
+
+import './App.css'
+
+function App() {
+  const [length, setLength] = useState(8)
+  const [numberAllowed, setNumberAllowed] = useState(false)
+  const [charAllowed, setcharAllowed] = useState(false)
+  const [password, setpassword] = useState("")
+
+  const passwordGenerator = useCallback(() => {
+    let pass = ""
+  let str = "ABCDEFGHIJKLMNOPQRSTUVWQYZabcdefghijklmnopqrstuvwxyz"
+
+  if(numberAllowed) str += "0123456789"
+  if(charAllowed) str += "!@#$%^&*"
+
+  for (let i = 1; i <= array.length; i++) {
+    let char = Math.floor(Math.random() * str.length + 1)
+    pass = str.charAt(char)
+  }
+
+  setpassword(pass)
+
+  }, [length, numberAllowed, charAllowed, setpassword])
+
+  
+
+  return (
+    <>
+      <div className='w-full max-w-md'></div>
+    </>
+  )
+}
+
+export default App
